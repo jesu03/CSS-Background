@@ -1,0 +1,87 @@
+/*
+2019-03-19 
+author: Bethuel Heldt
+*/
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+body, body * {box-sizing: border-box;}
+body{
+	margin: 0;
+	padding: 0;
+	font-size:18px;
+	font-family: Verdana, sans-serif;
+}
+h1{
+	font-family: 'Major Mono Display', monospace;
+	text-align: center;
+	background-color: rgba(0,0,0,0.50);
+	color: #FFF;
+	font-size: 2em;
+	line-height: 3em;
+	margin: 0 auto;
+	padding: 0;
+}
+footer{
+	background: black;
+	color:white;
+	position: fixed;
+	bottom: 0;
+	line-height: 1.4em;
+	font-size: .7em;
+	width: 100vw;
+	padding: 0 2em; 
+}
+/*THE ANIMATION STUFF*/
+.bg_animation{
+	min-width: 100vw;
+	min-height: 100vh;
+	background-size:cover;
+	background-attachment: fixed;
+	background-image: 
+		url(http://bethuelheldt.nl/voorbeelden/animated-background-css/images/ij01.jpg);
+	
+	background-image: 
+		url(http://bethuelheldt.nl/voorbeelden/animated-background-css/images/ij01.jpg), 
+		url(http://bethuelheldt.nl/voorbeelden/animated-background-css/images/ij02.jpg), 
+		url(http://bethuelheldt.nl/voorbeelden/animated-background-css/images/ij03.jpg), 
+		url(http://bethuelheldt.nl/voorbeelden/animated-background-css/images/ij04.jpg), 
+		url(http://bethuelheldt.nl/voorbeelden/animated-background-css/images/ij05.jpg);
+	
+	animation-name: background_images_slide_vertical;
+	animation-duration: 60s;
+	animation-direction: alternate;
+	animation-iteration-count:infinite;
+	animation-direction: normal;
+	animation-timing-function:  ease-in-out;
+	animation-fill-mode: both; 
+	animation-delay: 0s;
+}
+
+/********************************************************************************************* VERTICAL ANIMATION BG */
+@-webkit-keyframes background_images_slide_vertical {
+	   0%, 11% 	{background-position: center center, center -100vh, center 100vh, center 100vh, center 100vh;}
+	12.5%, 36% 	{background-position: center 100vh, center center, center -100vh, center 100vh, center 100vh;}
+	37.5%, 61% 	{background-position: center 100vh, center 100vh, center center, center -100vh, center 100vh;} 
+	62.5%, 86%	{background-position: center 100vh, center 100vh, center 100vh, center center, center -100vh;} 
+	87.5%, 100%	{background-position: center 100vh, center 100vh, center 100vh, center 100vh, center center;} 
+}
+@-moz-keyframes background_images_slide_vertical {
+	   0%, 11% 	{background-position: center center, center -100vh, center 100vh, center 100vh, center 100vh;}
+	12.5%, 36% 	{background-position: center 100vh, center center, center -100vh, center 100vh, center 100vh;}
+	37.5%, 61% 	{background-position: center 100vh, center 100vh, center center, center -100vh, center 100vh;} 
+	62.5%, 86%	{background-position: center 100vh, center 100vh, center 100vh, center center, center -100vh;} 
+	87.5%, 100%	{background-position: center 100vh, center 100vh, center 100vh, center 100vh, center center;} 
+}
+@-o-keyframes background_images_slide_vertical {
+	   0%, 11% 	{background-position: center center, center -100vh, center 100vh, center 100vh, center 100vh;}
+	12.5%, 36% 	{background-position: center 100vh, center center, center -100vh, center 100vh, center 100vh;}
+	37.5%, 61% 	{background-position: center 100vh, center 100vh, center center, center -100vh, center 100vh;} 
+	62.5%, 86%	{background-position: center 100vh, center 100vh, center 100vh, center center, center -100vh;} 
+	87.5%, 100%	{background-position: center 100vh, center 100vh, center 100vh, center 100vh, center center;}  
+}
+@keyframes background_images_slide_vertical {
+	   0%, 11% 	{background-position: center center, center -100vh, center 100vh, center 100vh, center 100vh;}
+	12.5%, 36% 	{background-position: center 100vh, center center, center -100vh, center 100vh, center 100vh;}
+	37.5%, 61% 	{background-position: center 100vh, center 100vh, center center, center -100vh, center 100vh;} 
+	62.5%, 86%	{background-position: center 100vh, center 100vh, center 100vh, center center, center -100vh;} 
+	87.5%, 100%	{background-position: center 100vh, center 100vh, center 100vh, center 100vh, center center;} 
+}
